@@ -1,38 +1,46 @@
-import React, { ReactElement, ReactNode, createContext, useState, useEffect } from "react";
-import { BackendAPI } from "../services/api";
-import { IContextProviderProps, IData, IResult, IWelcome } from "../interfaces"
+import React, { ReactElement, createContext, useState, useEffect } from 'react';
+import { BackendAPI } from '../services/api';
+import { IContextProviderProps, IData, IResult, IWelcome } from '../interfaces';
 
 const defaultData: IData = {
   isLoading: false,
-  getQuizList: (): void => { },
   quizList: [],
+  currentQuestion: 0,
+  setCurrentQuestion: (): void => {},
+  score: 0,
+  setScore: (): void => {},
 };
 
 export const ContextProvider = (props: IContextProviderProps): ReactElement => {
   const apiService = new BackendAPI();
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [quizList, setQuizList] = useState<Partial<IResult[]>>();
+  const [quizList, setQuizList] = useState<IResult[]>([]);
+  const [currentQuestion, setCurrentQuestion] = useState<Number>(0);
+  const [score, setScore] = useState<number>(0);
 
   useEffect(() => {
-    setIsLoading(true)
-    apiService.getProductsList(onGetProductsList)
-    console.log(quizList)
-  }, [])
+    setIsLoading(true);
+    apiService.getList(onGetQuizList);
+  }, []);
 
-  function onGetProductsList(error: any, data: IResult[]) {
+  function onGetQuizList(error: any, data: IWelcome) {
     if (!error) {
-      setQuizList(data);
+      setQuizList(data.results);
     }
-    setIsLoading(false)
-  }
-
-  function getList(param: string) {
-    setIsLoading(true)
-    apiService.getProductsList(onGetProductsList, param);
+    setIsLoading(false);
   }
 
   return (
-    <DataContext.Provider value={{ isLoading, setIsLoading, quizList, getList }}>
+    <DataContext.Provider
+      value={{
+        isLoading,
+        quizList,
+        currentQuestion,
+        setCurrentQuestion,
+        score,
+        setScore,
+      }}
+    >
       {props.children}
     </DataContext.Provider>
   );

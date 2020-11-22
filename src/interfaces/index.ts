@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface IContextProviderProps {
   defaults?: Partial<IData>;
@@ -6,9 +6,12 @@ export interface IContextProviderProps {
 }
 
 export interface IData {
-  isLoading: boolean,
-  getQuizList: any,
+  isLoading: boolean;
   quizList: IResult[];
+  currentQuestion: Number;
+  setCurrentQuestion: Function;
+  score: Number;
+  setScore: Function;
 }
 
 export interface IWelcome {
@@ -26,14 +29,14 @@ export interface IResult {
 }
 
 export enum CorrectAnswer {
-  False = "False",
-  True = "True",
+  False = 'False',
+  True = 'True',
 }
 
 export enum Difficulty {
-  Hard = "hard",
+  Hard = 'hard',
 }
 
 export enum Type {
-  Boolean = "boolean",
+  Boolean = 'boolean',
 }

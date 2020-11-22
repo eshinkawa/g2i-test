@@ -1,18 +1,14 @@
 import axios from 'axios';
-import {BASE_URL} from '../utils/constants';
+import { BASE_URL } from '../utils/constants';
 
 export class BackendAPI {
-  public async getProductsList(
-    callback,
-    searchParam: string = '',
-    pageNum: number = 0,
-  ) {
+  public async getList(callback: (error?: any, response?: any) => void) {
     const endpoint = this.createEndpoint();
-    const params = {params: {q: searchParam, pageNum}};
     try {
-      const result = await endpoint.get(BASE_URL, params);
-      return result;
+      const res = await endpoint.get(BASE_URL);
+      callback(null, res.data);
     } catch (error) {
+      callback(error);
       console.log(`Error fecthing data: ${error}`);
     }
   }
