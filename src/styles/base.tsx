@@ -51,10 +51,10 @@ export const CenteredContainer = styled.View`
   background-color: ${(props: string) => props.bgColor || Colors.white};
 `;
 
-export const SafeAreaCenteredContainer = styled.SafeAreaView`
+export const SafeAreaContainer = styled.SafeAreaView`
   ${CenteredContainerStr};
   background-color: ${(props: string) => props.bgColor || Colors.whiteGrey};
-  margin: 16px;
+  flex: 1;
 `;
 
 export const ScreenWidth = Dimensions.get('window').width;

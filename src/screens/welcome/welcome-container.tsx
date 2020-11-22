@@ -1,22 +1,39 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { Button, Text, View } from 'react-native';
-import { SafeAreaCenteredContainer } from '../../styles/base';
+import { Button, Text, Image } from 'react-native';
+import { SafeAreaContainer, ScreenWidth } from '../../styles/base';
+import styled from 'styled-components/native';
+import logo from '../../../assets/quiz.png';
+
+const TopText = styled.Text`
+  color: #d0e1f9;
+  font-size: 36px;
+  margin-bottom: 24px;
+`;
+
+const MiddleText = styled.Text`
+  color: #c6c6c6;
+  font-size: 24px;
+`;
 
 export default function WelcomeContainer() {
   const navigation = useNavigation();
 
   return (
-    <SafeAreaCenteredContainer>
-      <View>
-        <Text>Welcome to the Trivia Challenge</Text>
-        <Text>You will be presented with 10 True of False questions.</Text>
-        <Text>Can you score 100%?</Text>
-        <Button
-          onPress={() => navigation.push('QuizContainer')}
-          title={'BEGIN'}
-        />
-      </View>
-    </SafeAreaCenteredContainer>
+    <SafeAreaContainer bgColor={'#283655'}>
+      <Image
+        source={logo}
+        style={{ width: ScreenWidth * 0.7, height: ScreenWidth * 0.7 }}
+      />
+      <TopText>Welcome to the Trivia Challenge</TopText>
+      <MiddleText>
+        You will be presented with 10 True of False questions.
+      </MiddleText>
+      <Text>Can you score 100%?</Text>
+      <Button
+        onPress={() => navigation.push('QuizContainer')}
+        title={'BEGIN'}
+      />
+    </SafeAreaContainer>
   );
 }
