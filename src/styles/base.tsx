@@ -14,6 +14,7 @@ export const Colors = {
   yellow: '#fcc729',
   orange: '#FDB933',
   pink: '#FE0061',
+  actionBlue: '#00adef'
 };
 
 export const FontStyles = {
@@ -30,6 +31,7 @@ export const FontSize = {
   Medium: 16,
   Large: 18,
   XLarge: 24,
+  XXLarge: 30,
 };
 
 export const Spacing = {

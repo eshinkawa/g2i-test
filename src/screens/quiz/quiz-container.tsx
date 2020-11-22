@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import React, { useContext } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { DataContext } from '../../provider';
-import { SafeAreaCenteredContainer } from '../../styles/base';
+import { SafeAreaContainer } from '../../styles/base';
 
 export default function QuizContainer() {
   const { quizList, currentQuestion, setCurrentQuestion } = useContext(
@@ -11,7 +11,7 @@ export default function QuizContainer() {
   const navigation = useNavigation();
 
   return (
-    <SafeAreaCenteredContainer>
+    <SafeAreaContainer>
       <View>
         <Text>{quizList.length > 0 && quizList[currentQuestion].question}</Text>
         <Button
@@ -19,6 +19,6 @@ export default function QuizContainer() {
           title={'Next Question'}
         />
       </View>
-    </SafeAreaCenteredContainer>
+    </SafeAreaContainer>
   );
 }
