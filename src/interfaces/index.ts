@@ -12,6 +12,10 @@ export interface IData {
   setCurrentQuestion: Function;
   score: Number;
   setScore: Function;
+  scoreList: IScore[];
+  addToScore: Function;
+  setIsLoading: Function;
+  setScoreList: Function;
 }
 
 export interface IWelcome {
@@ -26,6 +30,10 @@ export interface IResult {
   question: string;
   correct_answer: CorrectAnswer;
   incorrect_answers: CorrectAnswer[];
+}
+export interface IScore {
+  question: string;
+  got_it_right: boolean;
 }
 
 export enum CorrectAnswer {

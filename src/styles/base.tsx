@@ -14,7 +14,8 @@ export const Colors = {
   yellow: '#fcc729',
   orange: '#FDB933',
   pink: '#FE0061',
-  actionBlue: '#00adef'
+  actionBlue: '#4897d8',
+  actionRed: '#f52549',
 };
 
 export const FontStyles = {

@@ -3,6 +3,7 @@ import { BASE_URL } from '../utils/constants';
 
 export class BackendAPI {
   public async getList(callback: (error?: any, response?: any) => void) {
+    console.log('calling getLIst');
     const endpoint = this.createEndpoint();
     try {
       const res = await endpoint.get(BASE_URL);
