@@ -34,17 +34,17 @@ export default function App() {
           <Stack.Screen
             name='Welcome'
             component={WelcomeContainer}
-            options={{ headerShown: false }}
+            options={{ headerShown: false, gestureEnabled: false }}
           />
           <Stack.Screen
             name='Quiz'
             component={QuizContainer}
-            options={{ headerShown: false }}
+            options={{ headerShown: false, gestureEnabled: false }}
           />
           <Stack.Screen
             name='Score'
             component={ScoreContainer}
-            options={{ headerShown: false }}
+            options={{ headerShown: false, gestureEnabled: false }}
           />
         </Stack.Navigator>
       </ContextProvider>
