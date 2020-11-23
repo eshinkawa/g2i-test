@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "g2i-quiz-test",
-    "slug": "g2i-quiz-test",
+    "name": "eshinkawa",
+    "slug": "eshinkawa",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -27,6 +27,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }

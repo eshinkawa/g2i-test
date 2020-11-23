@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { Button, Text, Image, TouchableOpacity } from 'react-native';
+import { Image } from 'react-native';
 import {
   Colors,
   FontSize,
@@ -11,7 +11,6 @@ import {
 import styled from 'styled-components/native';
 import logo from '../../../assets/quiz.png';
 import CustomButton from '../../components/button';
-import { useFonts } from '@expo-google-fonts/open-sans';
 
 const TopText = styled.Text`
   color: #d0e1f9;
@@ -53,7 +52,7 @@ export default function WelcomeContainer() {
       </MiddleText>
       <BottomText>Can you score 100%?</BottomText>
       <CustomButton
-        onPress={() => navigation.push('QuizContainer')}
+        onPress={() => navigation.push('Quiz')}
         title={'BEGIN'}
         bgColor={Colors.actionBlue}
       />

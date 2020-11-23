@@ -1,7 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useContext } from 'react';
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
-import { ContextProvider } from './src/provider';
+import { ContextProvider, DataContext } from './src/provider';
 import { createStackNavigator } from '@react-navigation/stack';
 import QuizContainer from './src/screens/quiz/quiz-container';
 import { NavigationContainer } from '@react-navigation/native';
@@ -12,6 +11,7 @@ import { useFonts } from 'expo-font';
 const Stack = createStackNavigator();
 
 export default function App() {
+  const { isLoading } = useContext(DataContext);
   let [fontsLoaded] = useFonts({
     'OpenSans-Light': require('./assets/fonts/OpenSans-Light.ttf'),
     'OpenSans-Regular': require('./assets/fonts/OpenSans-Regular.ttf'),
@@ -23,22 +23,26 @@ export default function App() {
     return <ActivityIndicator />;
   }
 
+  if (isLoading) {
+    return <ActivityIndicator size={'large'} />;
+  }
+
   return (
     <NavigationContainer>
       <ContextProvider>
-        <Stack.Navigator initialRouteName='WelcomeContainer'>
+        <Stack.Navigator initialRouteName='Welcome'>
           <Stack.Screen
-            name='WelcomeContainer'
+            name='Welcome'
             component={WelcomeContainer}
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name='QuizContainer'
+            name='Quiz'
             component={QuizContainer}
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name='ScoreContainer'
+            name='Score'
             component={ScoreContainer}
             options={{ headerShown: false }}
           />

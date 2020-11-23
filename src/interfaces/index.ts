@@ -36,6 +36,18 @@ export interface IScore {
   got_it_right: boolean;
 }
 
+export interface IQuiz {
+  quizList: IResult[];
+  handleQuestion: Function;
+  currentQuestion: Function;
+}
+
+export interface IScorePresenter {
+  scoreList: IScore[];
+  playAgain: Function;
+  countCorrectAnswers: number;
+}
+
 export enum CorrectAnswer {
   False = 'False',
   True = 'True',

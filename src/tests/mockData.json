@@ -1,0 +1,85 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Entertainment: Comics",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "In the comic book &quot;Archie&quot;, Betty is friends with Veronica because she is rich.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "category": "General Knowledge",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "&quot;Number 16 Bus Shelter&quot; was a child&#039;s name that was approved by the New Zealand government.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "In &quot;Portal 2&quot;, Cave Johnson started out Aperture Science as a shower curtain company.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "The song &quot;Mystery Train&quot; was released by artist &quot;Little Junior&#039;s Blue Flames&quot; in 1953.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "History",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "The Battle of Trafalgar took place on October 23rd, 1805",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "The band STRFKR was also briefly known as Pyramiddd.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Science & Nature",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "The chemical element Lithium is named after the country of Lithuania.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "category": "Entertainment: Board Games",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "The board game Go has more possible legal positions than the number of atoms in the visible universe.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Vehicles",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "The term &quot;GTO&quot; was originated by Ferrari?",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "The T-Mobile Sidekick smartphone is a re-branded version of the Danger Hiptop.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    }
+  ]
+}
